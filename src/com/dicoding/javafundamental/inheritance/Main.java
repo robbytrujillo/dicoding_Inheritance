@@ -40,10 +40,13 @@ public class Main {
         //o.makan(); -> error, karena method makan() tidak ada di class Object
         h.makan();
         k.makan();
+
         Object object = k; // bisa langsung diassign
         Hewan hewanK= k; // bisa langsung diassign
         //object.makan(); -> error, karena method makan() tidak ada di class Object
+
         hewanK.makan();
+
         Kucing kucingK = (Kucing) h; // tidak bisa langsung diassign, perlu casting
         kucingK.makan();
 
