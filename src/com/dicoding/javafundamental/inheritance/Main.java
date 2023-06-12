@@ -30,5 +30,24 @@ public class Main {
         System.out.println(popo.toString());
         System.out.println("meow equals puss ? " + meow.equals(puss));
         System.out.println("meow equals popo ? " + meow.equals(popo));
+
+        System.out.println("------------------------");
+
+        Object o = new Kucing(); // kucing adalah Object
+        Hewan h = new Kucing(); // kucing adalah Hewan
+        Kucing k = new Kucing(); // kucing adalah Kucing, pastinya :)
+
+        //o.makan(); -> error, karena method makan() tidak ada di class Object
+        h.makan();
+        k.makan();
+        Object object = k; // bisa langsung diassign
+        Hewan hewanK= k; // bisa langsung diassign
+        //object.makan(); -> error, karena method makan() tidak ada di class Object
+        hewanK.makan();
+        Kucing kucingK = (Kucing) h; // tidak bisa langsung diassign, perlu casting
+        kucingK.makan();
+
+        Hewan harimau = new Hewan();
+        Kucing anggora = (Kucing) harimau; // compile OK tetapi runtime error ClassCastException
     }
 }
