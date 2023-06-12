@@ -5,7 +5,7 @@ public class Hewan {
         System.out.println("construct Hewan");
     }
 
-    public void makan() {
+    public void makan() { // base method
         System.out.println("Hewan sedang makan..");
     }
 }
